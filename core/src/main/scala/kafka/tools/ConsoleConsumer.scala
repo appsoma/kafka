@@ -163,6 +163,7 @@ object ConsoleConsumer extends Logging {
       else
         stream
 
+      System.err.println( "Topic started: "+topicArg )
       for(messageAndTopic <- iter) {
         try {
           formatter.writeTo(messageAndTopic.key, messageAndTopic.message, System.out)
